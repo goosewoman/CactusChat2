@@ -12,6 +12,7 @@ CactusChat is a simple cross-platform minecraft chat client for Minecraft 1.8
 <b>Building the Source</b>
 --------
 
-CactusChat uses an ant build script for Intellij IDEA, although it should work without Intellij.
+IntelliJ does magic.
+There are also downloads for each minecraft version available at http://cactuschat.radthorne.com
 
 It makes use of MCProtocolLib at https://github.com/Steveice10/MCProtocolLib
