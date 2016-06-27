@@ -9,6 +9,7 @@ import org.spacehq.mc.protocol.data.message.Message;
 import org.spacehq.mc.protocol.packet.ingame.client.player.ClientPlayerPositionRotationPacket;
 import org.spacehq.mc.protocol.packet.ingame.server.ServerChatPacket;
 import org.spacehq.mc.protocol.packet.ingame.server.ServerJoinGamePacket;
+import org.spacehq.mc.protocol.packet.ingame.server.ServerPlayerListEntryPacket;
 import org.spacehq.mc.protocol.packet.ingame.server.ServerRespawnPacket;
 import org.spacehq.mc.protocol.packet.ingame.server.entity.player.ServerPlayerPositionRotationPacket;
 import org.spacehq.packetlib.event.session.*;
@@ -30,6 +31,10 @@ public class SessionAdapter implements SessionListener
     @Override
     public void packetReceived( PacketReceivedEvent event )
     {
+        if(event.getPacket() instanceof ServerPlayerListEntryPacket )
+        {
+            return;
+        }
         if ( event.getPacket() instanceof ServerChatPacket )
         {
             ServerChatPacket packet = event.getPacket();

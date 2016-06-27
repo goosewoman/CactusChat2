@@ -6,12 +6,12 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jline-2.11.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-io-2.4.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/annotations-1.0.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mcprotocollib-1.8.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/bcprov-jdk15on-1.48.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/org.xbill.dns_2.1.5.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/org.apache.commons.io-2.4.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/com.springsource.org.apache.commons.cli-1.2.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/com.springsource.org.apache.commons.lang-2.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mcprotocollib-1.9.4-SNAPSHOT.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

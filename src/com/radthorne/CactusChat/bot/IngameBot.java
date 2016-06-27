@@ -5,7 +5,7 @@ import com.radthorne.CactusChat.Main;
 import com.radthorne.CactusChat.console.Console;
 import com.radthorne.CactusChat.console.ReadThread;
 import com.radthorne.CactusChat.util.CactusChatClient;
-import org.spacehq.mc.auth.exception.AuthenticationException;
+import org.spacehq.mc.auth.exception.request.RequestException;
 import org.spacehq.mc.protocol.packet.ingame.client.ClientChatPacket;
 
 import java.io.IOException;
@@ -49,7 +49,7 @@ public class IngameBot extends Bot
 		{
 			this.conn.login( username, password );
 		}
-		catch ( AuthenticationException e )
+		catch ( RequestException e )
 		{
 			System.out.println( e.getMessage() );
 			System.out.println( "Login error: Press any key to exit" );
@@ -65,6 +65,7 @@ public class IngameBot extends Bot
 		}
 		this.conn.connect( host, port, new SessionAdapter(this) );
 		new ReadThread().start();
+		Main.debug( "sucessfully started");
 	}
 
 	public void chat( String message )

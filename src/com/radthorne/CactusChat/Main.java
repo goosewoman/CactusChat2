@@ -321,6 +321,7 @@ class Main
 	public static
 	void log( String message ) throws IOException
 	{
+		Main.debug( "logging to file");
 		String time = new SimpleDateFormat( "[HH:mm:ss] " ).format( new Date() );
 		String date = new SimpleDateFormat( "yyyy-MM-dd" ).format( new Date() );
 		char newline = '\n';

@@ -1,7 +1,7 @@
 package com.radthorne.CactusChat.util;
 
 import com.radthorne.CactusChat.Main;
-import org.spacehq.mc.auth.exception.AuthenticationException;
+import org.spacehq.mc.auth.exception.request.RequestException;
 import org.spacehq.mc.protocol.MinecraftProtocol;
 import org.spacehq.packetlib.Client;
 import org.spacehq.packetlib.Session;
@@ -18,7 +18,7 @@ public class CactusChatClient
 	MinecraftProtocol protocol;
 	private boolean connected = false;
 
-	public void login( String username, String password ) throws AuthenticationException
+	public void login( String username, String password ) throws RequestException
 	{
 		Main.debug( "Attempting to log in..." );
 		protocol = new MinecraftProtocol( username, password, false );
