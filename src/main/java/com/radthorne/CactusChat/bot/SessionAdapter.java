@@ -28,7 +28,6 @@ public class SessionAdapter implements SessionListener
         this.bot = bot;
     }
 
-    @Override
     public void packetReceived( PacketReceivedEvent event )
     {
         if(event.getPacket() instanceof ServerPlayerListEntryPacket )
@@ -68,28 +67,29 @@ public class SessionAdapter implements SessionListener
         }
     }
 
-    @Override
     public void disconnected( DisconnectedEvent event )
     {
         System.out.println( "Disconnected: " + Message.fromString( event.getReason() ).getFullText() );
         Main.reconnect();
     }
 
-    @Override
     public void packetSent( PacketSentEvent packetSentEvent )
     {
         // TODO: onPacketSentEvent(PacketSentEvent packetSentEvent)
     }
 
-    @Override
     public void connected( ConnectedEvent connectedEvent )
     {
 
     }
 
-    @Override
     public void disconnecting( DisconnectingEvent disconnectingEvent )
     {
+        if(disconnectingEvent.getCause() != null)
+        {
+            disconnectingEvent.getCause().printStackTrace();
+
+        }
     }
 
     private void handleChat( Message mes )

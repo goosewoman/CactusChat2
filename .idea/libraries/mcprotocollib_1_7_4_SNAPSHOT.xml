@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="mcprotocollib-1.7.4-SNAPSHOT">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/mcprotocollib-1.7.4-SNAPSHOT.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

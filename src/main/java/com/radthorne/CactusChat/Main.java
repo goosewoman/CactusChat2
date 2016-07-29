@@ -1,6 +1,5 @@
 package com.radthorne.CactusChat;
 
-import com.radthorne.CactusChat.Events.EventHandler;
 import com.radthorne.CactusChat.bot.IngameBot;
 import com.radthorne.CactusChat.console.Console;
 import com.radthorne.CactusChat.msg.AnsiColour;
@@ -12,7 +11,6 @@ import org.apache.commons.cli.*;
 import org.apache.commons.cli.Options;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
-import org.spacehq.mc.protocol.data.message.*;
 import org.xbill.DNS.*;
 
 import java.io.File;
@@ -38,7 +36,6 @@ class Main
 	private static Console       console;
 	private static int           entityId;
 	private static boolean       inGame;
-	private static EventHandler eventHandler;
 	private static boolean log = true;
 	private static int port        = 25565;
 	private static int restartTime = 30;
@@ -158,7 +155,6 @@ class Main
 				host = hpp.getHost();
 				port = hpp.getPort();
 			}
-			eventHandler = new EventHandler();
 			bot = new IngameBot();
 			console = new Console( bot );
 			Runtime.getRuntime().addShutdownHook( new Thread()
@@ -438,12 +434,6 @@ class Main
 			e.printStackTrace();
 			reconnect();
 		}
-	}
-
-	public static
-	EventHandler getEventHandler()
-	{
-		return eventHandler;
 	}
 
 	public static
