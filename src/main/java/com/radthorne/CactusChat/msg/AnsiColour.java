@@ -9,7 +9,7 @@ public
 class AnsiColour
 {
 
-    private static final Map<ChatColour, String> replacements = new EnumMap( ChatColour.class );
+    private static final Map<ChatColour, String> replacements = new EnumMap<>( ChatColour.class );
     private static final ChatColour[]            colors       = ChatColour.values();
 
     public static

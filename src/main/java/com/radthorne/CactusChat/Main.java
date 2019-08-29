@@ -21,6 +21,8 @@ import java.security.CodeSource;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static com.github.steveice10.mc.protocol.data.message.Message.fromString;
+
 public
 class Main
 {
@@ -41,7 +43,7 @@ class Main
 	private static int restartTime = 30;
 
 	public static
-	void main( String args[] )
+	void main(String[] args)
 	{
 		try
 		{
@@ -383,7 +385,7 @@ class Main
 		{
 			if ( ! isColour() )
 			{
-				message = org.spacehq.mc.protocol.data.message.Message.fromString( message ).toJsonString();
+				message = fromString( message ).toJsonString();
 			}
 			try
 			{

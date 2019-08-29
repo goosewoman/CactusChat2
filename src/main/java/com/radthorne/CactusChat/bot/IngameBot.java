@@ -1,16 +1,14 @@
 package com.radthorne.CactusChat.bot;
 
 
+import com.github.steveice10.mc.auth.exception.request.RequestException;
+import com.github.steveice10.mc.protocol.packet.ingame.client.ClientChatPacket;
 import com.radthorne.CactusChat.Main;
 import com.radthorne.CactusChat.console.Console;
 import com.radthorne.CactusChat.console.ReadThread;
 import com.radthorne.CactusChat.util.CactusChatClient;
-import org.spacehq.mc.auth.exception.request.RequestException;
-import org.spacehq.mc.protocol.packet.ingame.client.ClientChatPacket;
 
 import java.io.IOException;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class IngameBot extends Bot
 {

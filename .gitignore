@@ -10,3 +10,4 @@ classes
 config.yml
 *.iml
 .idea/
+/cactuschat.bat
